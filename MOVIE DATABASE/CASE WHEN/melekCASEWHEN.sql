@@ -1,0 +1,22 @@
+SELECT m.name,g.genre_name AS Genres,CASE
+WHEN g.genre_name='Action' THEN 'Aksiyon'
+WHEN g.genre_name='Adventure' THEN 'Macera'
+WHEN g.genre_name='Animation' THEN 'Animasyon'
+WHEN g.genre_name='Comedy' THEN 'Komedi'
+WHEN g.genre_name='Crime' THEN 'Suç'
+WHEN g.genre_name='Documentary' THEN 'Belgesel'
+WHEN g.genre_name='Drama' THEN 'Drama'
+WHEN g.genre_name='Family' THEN 'Aile'
+WHEN g.genre_name='Fantasy' THEN 'Kurgu'
+WHEN g.genre_name='History' THEN 'Tarihi'
+WHEN g.genre_name='Horror' THEN 'Korku'
+WHEN g.genre_name='Music' THEN 'Müzik'
+WHEN g.genre_name='Mystery' THEN 'Gizemli'
+WHEN g.genre_name='Romance' THEN 'Romantik'
+WHEN g.genre_name='Science Fiction' THEN 'Bilim Kurgu'
+WHEN g.genre_name='TV Movie' THEN 'TV dizisi'
+WHEN g.genre_name='Thriller' THEN 'Gerilim'
+WHEN g.genre_name='War' THEN 'Savaþ'
+WHEN g.genre_name='Western' THEN 'Batý'
+END AS Tür
+FROM GENRES G JOIN MOVIE M ON m.genre_ýd=G.ID
